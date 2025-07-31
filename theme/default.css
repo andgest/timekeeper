@@ -30,9 +30,6 @@
 .phase-3{
 	/* styles for body element */
 	background-color: red;
-
-}
-.phase-3 #time {
 	@keyframes blink {
 	  50% {
 	    opacity: 0.0;
@@ -40,6 +37,9 @@
 	}
 
   animation: blink 1s step-start 0s infinite;
+}
+.phase-3 #time {
+
 }
 
 /* classes for states */
