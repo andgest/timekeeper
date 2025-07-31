@@ -22,6 +22,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+// The wake lock sentinel.
+let wakeLock = null;
+
+// Function that attempts to request a wake lock.
+const requestWakeLock = async () => {
+  try {
+    wakeLock = await navigator.wakeLock.request('screen');
+    wakeLock.addEventListener('release', () => {
+      console.log('Wake Lock was released');
+    });
+    console.log('Wake Lock is active');
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+};
+
 $(function () {
 	let nletters = 5, last_nletters = 5;
 	let time_str = "00:00";
