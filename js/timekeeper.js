@@ -163,13 +163,13 @@ $(function () {
 		start();
 	});
 
-	$('#time').dblclick(function (event) {
+	/*$('#time').dblclick(function (event) {
 		event.preventDefault();
 		let new_time = prompt('Force the time to', time_str);
 		if (new_time !== null) {
 			set_time(new_time);
 		}
-	});
+	});*/
 
 	function pause() {
 		if ($('.nav li#standby').hasClass('active')) {
