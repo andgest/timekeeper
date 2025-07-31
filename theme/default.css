@@ -5,7 +5,7 @@
 
 .phase-0{
     /* styles for body element */
-    background-color: #56a756;
+    background-color: #9fc59f;
 }
 .phase-0 #time{
 }
@@ -13,7 +13,7 @@
 /* after 1st chime before 2nd chime */
 .phase-1{
     /* styles for body element */
-    background-color: ForestGreen;
+    background-color: #56a756;
 }
 .phase-1 #time{
 }
