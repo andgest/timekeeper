@@ -3,32 +3,50 @@
  By using these classes, you can change style according to the phase and state.
 */
 
-
-/* before 1st chime */
 .phase-0{
-	/* styles for body element */
+    /* styles for body element */
+    background-color: #56a756;
 }
 .phase-0 #time{
 }
 
 /* after 1st chime before 2nd chime */
 .phase-1{
-	/* styles for body element */
+    /* styles for body element */
+    background-color: ForestGreen;
+}
+.phase-1 #time{
 }
 
 /* after 2nd chime before 3rd chime */
 .phase-2{
-	/* styles for body element */
+    /* styles for body element */
+    background-color: #d17e18;
 }
 .phase-2 #time{
-	/* style for displayed time can be changed in this way */
 }
 
 /* after 3rd chime */
 .phase-3{
 	/* styles for body element */
-}
+	background-color: red;
 
+}
+.phase-3 #time {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+}
 
 /* classes for states */
 .state-stanby{
