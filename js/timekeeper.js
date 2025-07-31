@@ -321,7 +321,7 @@ $(function () {
 		}
 	}
 
-	$("body").click(function (event) {
+	$("#time").click(function (event) {
 		event.preventDefault();
 		if($(".state-standby").length > 0) {
 			start();
@@ -332,7 +332,7 @@ $(function () {
 		}
 	});
 
-	$("body").dblclick(function (event) {
+	$("#info").click(function (event) {
 		event.preventDefault();
 		if($(".state-start").length > 0) {
 			standby();
