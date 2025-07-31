@@ -321,17 +321,17 @@ $(function () {
 		}
 	}
 
-	$(".state-standby #time, .state-paused #time").click(function (event) {
+	$(".state-standby, .state-paused").click(function (event) {
 		event.preventDefault();
 		start();
 	});
 
-	$(".state-start #time").click(function (event) {
+	$(".state-start").click(function (event) {
 		event.preventDefault();
 		pause();
 	});
 
-	$(".state-start #time, .state-paused #time").dblclick(function(){
+	$(".state-start, .state-paused").dblclick(function(){
 	  event.preventDefault();
 		standby();
 	});
