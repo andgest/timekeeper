@@ -321,17 +321,28 @@ $(function () {
 		}
 	}
 
-	$(".state-standby, .state-paused").click(function (event) {
+	$(".state-paused").click(function (event) {
 		event.preventDefault();
 		start();
 	});
 
+	$(".state-standby").click(function (event) {
+		event.preventDefault();
+		start();
+	});
+
+	
 	$(".state-start").click(function (event) {
 		event.preventDefault();
 		pause();
 	});
 
-	$(".state-start, .state-paused").dblclick(function(){
+	$(".state-start").dblclick(function(){
+	  event.preventDefault();
+		standby();
+	});
+
+	$(".state-paused").dblclick(function(){
 	  event.preventDefault();
 		standby();
 	});
