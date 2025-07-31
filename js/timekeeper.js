@@ -321,6 +321,11 @@ $(function () {
 		}
 	}
 
+	$(".state-standby #time").click(function (event) {
+		event.preventDefault();
+		start();
+	});
+
 	if (window.obsstudio) {
 		window.obsstudio.getCurrentScene(function (scene) {
 			obs_scene_change(scene.name);
