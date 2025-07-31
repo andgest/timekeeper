@@ -283,7 +283,7 @@ $(function () {
 				if ((last_time < time1 && time1 <= cur_time) || (last_time == time1 && cur_time == time1)) {
 					changePhaseClass('1');
 					audio_chime1.currentTime = 0;
-					audio_chime1.play();
+					//audio_chime1.play();
 					console.log('chime1');
 				}
 
