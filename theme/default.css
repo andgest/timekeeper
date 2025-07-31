@@ -52,6 +52,6 @@
 .state-paused{
 }
 
-.state {
+#state {
 	display: none;
 }
