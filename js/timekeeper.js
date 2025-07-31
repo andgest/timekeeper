@@ -321,30 +321,24 @@ $(function () {
 		}
 	}
 
-	$(".state-paused").click(function (event) {
+	$("body").click(function (event) {
 		event.preventDefault();
-		start();
+		if($(".state-standby").length > 0) {
+			start();
+		} else if($(".state-start").length > 0) {
+			pause();
+		} else if($(".state-paused").length > 0) {
+			start();
+		}
 	});
 
-	$(".state-standby").click(function (event) {
+	$("body").dblclick(function (event) {
 		event.preventDefault();
-		start();
-	});
-
-	
-	$(".state-start").click(function (event) {
-		event.preventDefault();
-		pause();
-	});
-
-	$(".state-start").dblclick(function(){
-	  event.preventDefault();
-		standby();
-	});
-
-	$(".state-paused").dblclick(function(){
-	  event.preventDefault();
-		standby();
+		if($(".state-start").length > 0) {
+			standby();
+		} else if($(".state-paused").length > 0) {
+			standby();
+		}
 	});
 
 	if (window.obsstudio) {
