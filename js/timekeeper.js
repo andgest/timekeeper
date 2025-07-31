@@ -321,8 +321,14 @@ $(function () {
 		}
 	}
 
+	$(".navbar").click(function (event) {
+		event.preventDefault();
+		event.stopPropagation();
+	});
+
 	$("#time").click(function (event) {
 		event.preventDefault();
+		event.stopPropagation();
 		if($(".state-standby").length > 0) {
 			start();
 		} else if($(".state-start").length > 0) {
@@ -332,7 +338,7 @@ $(function () {
 		}
 	});
 
-	$("#info").click(function (event) {
+	$("body").click(function (event) {
 		event.preventDefault();
 		if($(".state-start").length > 0) {
 			standby();
