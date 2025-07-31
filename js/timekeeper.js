@@ -37,6 +37,7 @@ const requestWakeLock = async () => {
     console.error(`${err.name}, ${err.message}`);
   }
 };
+await requestWakeLock();
 
 $(function () {
 	let nletters = 5, last_nletters = 5;
