@@ -367,7 +367,7 @@ $(function () {
         timeBlink();
 	});
 
-	if (window.obsstudio) {
+	if (window.obsstudio && !isInIframe) {
 		window.obsstudio.getCurrentScene(function (scene) {
 			obs_scene_change(scene.name);
 		});
