@@ -22,6 +22,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+#navbar {
+    display: none;
+}
+
+body.is-in-iframe {
+
+}
+
+#time-total-wrapper {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+}
+
 @font-face {
     font-family: 'Roboto-fancyColon';
     src: url('../font/Roboto-fancyColon-Medium.woff') format('woff');

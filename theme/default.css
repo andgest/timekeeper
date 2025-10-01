@@ -3,6 +3,10 @@
  By using these classes, you can change style according to the phase and state.
 */
 
+#time {
+    transition: opacity 0.2s ease;
+}
+
 .phase-0{
     /* styles for body element */
     background-color: #9fc59f;

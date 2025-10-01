@@ -36,6 +36,12 @@ $(function () {
 	$('#time3').val('3:00');
 	$('#info').html("");
 
+    const isInIframe = window.self !== window.top;
+    if (isInIframe) {
+        $('body').addClass("is-in-iframe");
+        $('#time-total-wrapper').remove();
+    }
+
 	function getHashParams() {
 		var hashParams = {};
 		var e,
@@ -66,6 +72,11 @@ $(function () {
 		} else {
 			loadedcss = 'default';
 		}
+        if(params.start !== undefined) {
+            setTimeout(function() {
+                start();
+            }, 0);
+        }
 		$('head').append('<link rel="stylesheet" type="text/css" href="theme/' + loadedcss + '.css">');
 	}
 
@@ -147,6 +158,7 @@ $(function () {
 		audio_chime1.load();
 		audio_chime2.load();
 		audio_chime3.load();
+        timeBlink();
 	}
 
 	$('.nav #standby').click(function (event) {
@@ -170,6 +182,13 @@ $(function () {
 			set_time(new_time);
 		}
 	});*/
+
+    function timeBlink() {
+        $('#time').css("opacity", 0);
+        setTimeout(function() {
+            $('#time').css("opacity", 1);
+        }, 100);
+    }
 
 	function pause() {
 		if ($('.nav li#standby').hasClass('active')) {
@@ -345,6 +364,7 @@ $(function () {
 		} else if($(".state-paused").length > 0) {
 			standby();
 		}
+        timeBlink();
 	});
 
 	if (window.obsstudio) {
